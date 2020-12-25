@@ -1,0 +1,14 @@
+class hw2:
+    print("User Identification Program")
+    x = str(input("First name: "))
+    y = str(input("Last name: "))
+    z = int(input("Age: "))
+    w = int(input("Birth year: "))
+    list = [x,y,z,w]
+    for i in range (len(list)):
+        print(list[i])
+    if z<18:
+        print("You cant go out because it's too dangerous")
+
+    else:
+        print("You can go out to the street")

@@ -1,0 +1,9 @@
+olist = []
+for i in range(5):
+    q = input("write a value")
+    olist.append(q)
+
+
+
+for i in range(5):
+        print("inputs are {}".format(olist[i]))

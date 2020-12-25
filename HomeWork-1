@@ -6,4 +6,4 @@ for i in range(5):
 
 
 for i in range(5):
-        print("inputs are {}".format(olist[i]))
+        print(f"inputs are {olist[i]}")

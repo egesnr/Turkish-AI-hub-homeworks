@@ -1,0 +1,40 @@
+print("Hangman Game")
+x = input("Please write your name ")
+print(f"Welcome {x}")
+word = "counter"
+list =[x for x in word]
+print("Write a letter to find the word. Make sure your man is hanged or not.")
+letter = ""
+list2 = ["_","_","_","_","_","_","_"]
+list3 = ["  O ","  I ",">---<","  I ","  Λ "]
+it = 4
+while(True):
+ letter = input()
+ i = it
+ if letter in list:
+            
+            print("True guess")
+            list2[list.index(letter)]= list[list.index(letter)]
+            print(*list2)
+        
+ else:
+            print("Wrong")
+            
+            for i in range(i,len(list3),1):
+               
+              print(list3[i])
+            it -=1
+ if it == -1:
+     print("Game Over. You ve Lost")
+     
+     
+     print("  I---")
+     print(*list3,sep = "\n")
+     break
+ elif "_" not in list2 :
+     print("Nice job. You ve won!")
+     
+     break
+
+ 
+            

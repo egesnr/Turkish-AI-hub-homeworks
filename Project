@@ -1,0 +1,50 @@
+import random
+print("Enter Your name and surname")
+name = input("Name ")
+surname = input("Surname ")
+print("Welcome "+name+surname)
+courses = ['Math','Physics','Basketball','Art','Sociology']
+print(courses,sep=' ')
+print("Please select at least 3 of them.Write name of courses 1 by 1.")
+count = 0;
+choosen = []
+grades = []
+def dd(M,F,p):
+    grade = M*0.3 + F*0.5+p*0.2
+    if grade<30:
+        return "FF"
+    elif grade>30 and grade<50:
+        return "DD"
+    elif grade>50 and grade<70:
+        return "CC"
+    elif grade>70 and grade<90:
+        return "BB"
+    elif grade>90:
+        return "AA"
+while(count<5):
+    choise = input()
+    if choise in courses:
+        print("Invalid chose.")
+    else:
+        count+=1
+        choosen.append(choise)
+    if count==3:
+         print("You can choose 2 more or finish the choosing")
+         print("press 0 to exit or 1 to continue")
+         p = int(input())
+         if p ==0:
+             break
+         else:
+             continue
+for x in range(len(choosen)):
+    print(choosen[x] +"Grades")
+    q = 0
+    for i in range (3):
+        a = random.randint(1,101)
+        grades.insert(q,a)
+        q+=1
+    h = 0
+    for i in range(3):
+     print("Grades is ",grades[h])
+     h += 1
+    print(dd(grades[0],grades[1],grades[2]))
